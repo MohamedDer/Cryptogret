@@ -1,0 +1,2 @@
+# Cryptogret
+Bitcoin Regret Calculator !
