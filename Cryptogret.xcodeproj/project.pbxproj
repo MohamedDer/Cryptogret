@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		633B0E74206CF4EF00070811 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633B0E73206CF4EF00070811 /* ResultViewController.swift */; };
 		638775B8206A76A30082D5A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638775B7206A76A30082D5A5 /* AppDelegate.swift */; };
 		638775BA206A76A30082D5A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638775B9206A76A30082D5A5 /* ViewController.swift */; };
 		638775BD206A76A30082D5A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638775BB206A76A30082D5A5 /* Main.storyboard */; };
 		638775BF206A76A30082D5A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 638775BE206A76A30082D5A5 /* Assets.xcassets */; };
 		638775C2206A76A30082D5A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638775C0206A76A30082D5A5 /* LaunchScreen.storyboard */; };
+		638775CB206A78820082D5A5 /* CryptoCompareAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638775CA206A78820082D5A5 /* CryptoCompareAPI.swift */; };
+		638775D3206A9D010082D5A5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638775D2206A9D010082D5A5 /* API.swift */; };
+		D0B64B32C3CA1061005C3054 /* Pods_Cryptogret.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5818BD2193410B5B8C3CCEB /* Pods_Cryptogret.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29ADC58891299E6428B905C1 /* Pods-Cryptogret.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptogret.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cryptogret/Pods-Cryptogret.release.xcconfig"; sourceTree = "<group>"; };
+		31F1E36BF58BB80295AB2CED /* Pods-Cryptogret.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptogret.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cryptogret/Pods-Cryptogret.debug.xcconfig"; sourceTree = "<group>"; };
+		633B0E73206CF4EF00070811 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		638775B4206A76A30082D5A5 /* Cryptogret.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cryptogret.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		638775B7206A76A30082D5A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		638775B9206A76A30082D5A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +29,9 @@
 		638775BE206A76A30082D5A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		638775C1206A76A30082D5A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		638775C3206A76A30082D5A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		638775CA206A78820082D5A5 /* CryptoCompareAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompareAPI.swift; sourceTree = "<group>"; };
+		638775D2206A9D010082D5A5 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		A5818BD2193410B5B8C3CCEB /* Pods_Cryptogret.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptogret.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0B64B32C3CA1061005C3054 /* Pods_Cryptogret.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +51,8 @@
 			children = (
 				638775B6206A76A30082D5A5 /* Cryptogret */,
 				638775B5206A76A30082D5A5 /* Products */,
+				71F0E806C9E4CA318AF3CD60 /* Pods */,
+				FED72B2ABF8155EF10F34D70 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +67,42 @@
 		638775B6206A76A30082D5A5 /* Cryptogret */ = {
 			isa = PBXGroup;
 			children = (
+				638775C9206A77D60082D5A5 /* Network */,
 				638775B7206A76A30082D5A5 /* AppDelegate.swift */,
 				638775B9206A76A30082D5A5 /* ViewController.swift */,
 				638775BB206A76A30082D5A5 /* Main.storyboard */,
 				638775BE206A76A30082D5A5 /* Assets.xcassets */,
 				638775C0206A76A30082D5A5 /* LaunchScreen.storyboard */,
 				638775C3206A76A30082D5A5 /* Info.plist */,
+				633B0E73206CF4EF00070811 /* ResultViewController.swift */,
 			);
 			path = Cryptogret;
+			sourceTree = "<group>";
+		};
+		638775C9206A77D60082D5A5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				638775CA206A78820082D5A5 /* CryptoCompareAPI.swift */,
+				638775D2206A9D010082D5A5 /* API.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		71F0E806C9E4CA318AF3CD60 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				31F1E36BF58BB80295AB2CED /* Pods-Cryptogret.debug.xcconfig */,
+				29ADC58891299E6428B905C1 /* Pods-Cryptogret.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FED72B2ABF8155EF10F34D70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5818BD2193410B5B8C3CCEB /* Pods_Cryptogret.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +112,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 638775C6206A76A30082D5A5 /* Build configuration list for PBXNativeTarget "Cryptogret" */;
 			buildPhases = (
+				C74DEFF0184F8D282CA68D6E /* [CP] Check Pods Manifest.lock */,
 				638775B0206A76A30082D5A5 /* Sources */,
 				638775B1206A76A30082D5A5 /* Frameworks */,
 				638775B2206A76A30082D5A5 /* Resources */,
+				9240E191B8D42B05DB99E955 /* [CP] Embed Pods Frameworks */,
+				6D9B2025C0EF14D35A066010 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,13 +175,78 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6D9B2025C0EF14D35A066010 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cryptogret/Pods-Cryptogret-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9240E191B8D42B05DB99E955 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Cryptogret/Pods-Cryptogret-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cryptogret/Pods-Cryptogret-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C74DEFF0184F8D282CA68D6E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cryptogret-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		638775B0206A76A30082D5A5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				633B0E74206CF4EF00070811 /* ResultViewController.swift in Sources */,
 				638775BA206A76A30082D5A5 /* ViewController.swift in Sources */,
 				638775B8206A76A30082D5A5 /* AppDelegate.swift in Sources */,
+				638775D3206A9D010082D5A5 /* API.swift in Sources */,
+				638775CB206A78820082D5A5 /* CryptoCompareAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +381,7 @@
 		};
 		638775C7206A76A30082D5A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31F1E36BF58BB80295AB2CED /* Pods-Cryptogret.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +397,7 @@
 		};
 		638775C8206A76A30082D5A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29ADC58891299E6428B905C1 /* Pods-Cryptogret.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

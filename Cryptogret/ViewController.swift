@@ -9,17 +9,44 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var investment: UITextField!
+    @IBOutlet weak var datepicker: UIDatePicker!
+    @IBOutlet weak var calculate: UIButton!
+    
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        datepicker.maximumDate = Date.init()
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func calculate(_ sender: Any) {
+        
+        if investment.text == nil || investment.text == ""{
+            return
+        }
+        
+        let investmentVal  = Double(investment.text!)
+        let datets = datepicker.date.timeIntervalSince1970
+        
+        API.getBTCValue(apitarget: .usdtoBTC, ts: datets).then{ response -> Void in
+            let multipliedVal = response * Double(investmentVal!)
+            API.getBTCValue(apitarget: .btctoUSD, ts: NSDate().timeIntervalSince1970).then{ secresponse -> Void in
+                let result = secresponse*multipliedVal
+                print(" ayk rounded \(result.rounded())")
+//                resultss = result.rounded()
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let controller = storyboard.instantiateViewController(withIdentifier: "resultvc")
+                self.present(controller, animated: true, completion: nil)
+            }
+        }
+        
     }
-
-
+    
+    
 }
 
