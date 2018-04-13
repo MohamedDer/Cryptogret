@@ -37,7 +37,6 @@ class ViewController: UIViewController {
             API.getBTCValue(apitarget: .btctoUSD, ts: NSDate().timeIntervalSince1970).then{ secresponse -> Void in
                 let result = secresponse*multipliedVal
                 print(" ayk rounded \(result.rounded())")
-//                resultss = result.rounded()
                 
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let controller = storyboard.instantiateViewController(withIdentifier: "resultvc")
